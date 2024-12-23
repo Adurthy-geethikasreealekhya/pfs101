@@ -1,0 +1,51 @@
+{% extends 'dashboard.html' %}
+{% block addcss %}
+<link rel="stylesheet" href="{{url_for('static',filename='addnotes.css')}}">
+{% endblock %}
+{% block content %}
+   <center>
+   
+        <table border = "2">
+            <thead>
+            <tr>
+            <th>Fileid</th>
+            <th>Filename</th>
+            <th>Created Time</th>
+            <th>Link</th>
+            </tr>
+            </thead>
+            {% for i in filesdata %}
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td><a href="{{url_for('viewfile',fid=i[0])}}">view</a></td>
+                <td><a href="{{url_for('downloadfile',fid=i[0])}}">Download</a></td>
+            </tr>
+            {% endfor %}
+       <!--     <tr>
+                <td></td>
+                <td></td>
+                
+                    <td ><a href="#">view</a>
+                    <td href="#">Delete</td>
+                    <td href="#">Update</td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+              
+                    <td href="#">view
+                    <td href="#">Delete</td>
+                    <td href="#">Update</td>
+                   
+                </td>
+            </tr>-->
+        </table>
+    
+    </center>
+</body>
+{% endblock %}
+</html>

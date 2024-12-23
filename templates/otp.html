@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+  body{
+    background-image: linear-gradient(to left,rgb(111, 111, 209),white);
+  }
+  form{
+   background-color: black;
+   color:white;
+   margin-top: 60px;
+   margin-left: 550px;
+   margin-right: 550px;
+   padding:50px;
+   border-radius: 10px;
+  }
+  h1{
+   
+   font-size: 40px;
+  }
+  button{
+   
+   padding:10px;
+           color:white;
+           background-color: rgb(67, 67, 211);
+           border-radius: 10px;
+           font-size: 20px;
+           font-weight: 200;
+  }
+  label{
+   font-size: 20px;
+           font-weight: 200;
+  }
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<body>
+    <center>
+      <h1>OTP</h1>
+        <form method="post">
+            <label>Enter OTP:</label><br/>
+            <input type="text" name="otp" placeholder="otp"/><br/><br/>
+            <button>Submit</button>
+        </form>
+        </center>
+</body>
+</html>

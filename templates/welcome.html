@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+       
+            background-image: linear-gradient(to left,rgb(111, 111, 209),white);
+            background-size: cover;
+            background:auto;
+            
+        }
+        button{
+            margin-top: 280px;
+            padding:10px;
+            color:white;
+            background-color: rgb(72, 188, 233);
+            border-radius: 10px;
+            font-size: 30px;
+            font-weight: 900;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+
+    <a href="{{url_for('create')}}"><button>Create</button></a>
+    <a href="{{url_for('login')}}"><button>Login</button></a>
+    </center>
+</body>
+</html>
